@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="JavaObjectDTO" />
         <module name="UsersMS" />
         <module name="AppDiscoveryService" />
         <module name="ApiGateway" />
