@@ -1,6 +1,6 @@
 package com.sai.UsersMS.controller;
 
-import com.sai.UsersMS.service.UsersService;
+import com.sai.UsersMS.service.UserServiceImpl;
 import com.sai.dto.CreateUserRequestModel;
 import com.sai.dto.UserDTO;
 import jakarta.validation.Valid;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     private final Environment env;
-    private final UsersService usersService;
+    private final UserServiceImpl usersService;
     private ModelMapper modelMapper;
 
     @GetMapping("/status/check")
@@ -25,7 +25,7 @@ public class UserController {
         return "working!!!" + " in the port number  -> " + env.getProperty("local.server.port");
     }
 
-    @PostMapping
+    @PostMapping()
     public ResponseEntity<?> createUser(@Valid  @RequestBody CreateUserRequestModel userDetails){
 
         try{
